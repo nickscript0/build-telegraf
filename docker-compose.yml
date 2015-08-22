@@ -3,3 +3,8 @@ influxdb:
   ports:
     - "8083:8083"
     - "8086:8086"
+
+telegrafbuild:
+  build: ./docker_build_telegraph
+  links:
+    - influxdb
