@@ -6,5 +6,8 @@ influxdb:
 
 telegrafbuild:
   build: ./docker_build_telegraph
+  volumes:
+    - ./docker_build_telegraph/src:/go
+    #- ./docker_build_telegraph/src/:/go/src/github.com/influxdb/telegraf
   links:
     - influxdb

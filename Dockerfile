@@ -20,6 +20,7 @@ RUN /opt/influxdb/influxd config > /etc/influxdb.toml
 # Use /data for all disk storage
 RUN sed -i 's/dir = "\/.*influxdb/dir = "\/data/' /etc/influxdb.toml
 
-#VOLUME ["/data"]
+# Persist data
+VOLUME ["/data"]
 
 ENTRYPOINT ["/opt/influxdb/influxd", "--config", "/etc/influxdb.toml"]
