@@ -5,9 +5,8 @@ influxdb:
     - "8086:8086"
 
 telegrafbuild:
-  build: ./docker_build_telegraph
+  build: ./docker_build_telegraf
   volumes:
-    - ./docker_build_telegraph/src:/go
-    #- ./docker_build_telegraph/src/:/go/src/github.com/influxdb/telegraf
+    - ./docker_build_telegraf/src:/go
   links:
     - influxdb
