@@ -8,5 +8,6 @@ telegrafbuild:
   build: ./docker_build_telegraf
   volumes:
     - ./docker_build_telegraf/src:/go
+    - ./docker_build_telegraf/telegraf.conf:/etc/opt/telegraf/telegraf.conf
   links:
     - influxdb

@@ -20,8 +20,6 @@ docker-compose up -d buildtelegraf
 docker-compose run buildtelegraf /bin/bash
 cd /go/src/github.com/influxdb/telegraf/
 ./telegraf -config /etc/opt/telegraf/telegraf.conf
-
-
 ```
 
 ## Sample queries
