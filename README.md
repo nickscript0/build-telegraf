@@ -1,6 +1,6 @@
 # Build InfluxDB Telegraf
 ## Overview
-A docker-compose environment for building InfluxDB Telegraf from source
+A docker-compose environment for building and developing InfluxDB Telegraf
 
 ## Usage
 ### Run Influxdb
