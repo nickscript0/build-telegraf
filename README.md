@@ -1,6 +1,6 @@
-# Run Latest InfluxDB
+# Build InfluxDB Telegraf
 ## Overview
-Simple Docker container that runs the latest pre-built InfluxDB package
+A docker-compose environment for building InfluxDB Telegraf from source
 
 ## Usage
 ### Run Influxdb
@@ -22,7 +22,7 @@ cd /go/src/github.com/nickscript0/telegraf/
 ./telegraf -config /etc/opt/telegraf/telegraf.conf
 ```
 
-## Sample queries
+## Sample InfluxDB queries
 ```sql
 select * from cpu_system where cpu = 'cpu-total' AND time > now() - 2m
 ```
