@@ -10,7 +10,7 @@ docker-compose up -d influxdb
 ```
 
 ### Build and run telegraf from source
-Warning: Running this the first time will take a while as it downloads about 200MB of dependencies and builds them
+*Warning: If you're on a limited internet connection, running this the first time will download about 200MB of dependencies*
 ```bash
 # "go get" and build telegraf
 docker-compose up -d buildtelegraf
