@@ -1,9 +1,14 @@
 influxdb:
   build: .
-  ports:
-    - "8083:8083"
-    - "8086:8086"
-
+  #ports:
+  #  - "8083:8083"
+  #  - "8086:8086"
+mysql:
+    image: mysql
+    #ports:
+    #    - "3306:3306"
+    environment:
+        MYSQL_ALLOW_EMPTY_PASSWORD: yes
 telegrafbuild:
   build: ./docker_build_telegraf
   volumes:
@@ -11,3 +16,4 @@ telegrafbuild:
     - ./docker_build_telegraf/telegraf.conf:/etc/opt/telegraf/telegraf.conf
   links:
     - influxdb
+    - mysql

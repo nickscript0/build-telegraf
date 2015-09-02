@@ -23,6 +23,23 @@ cd /go/src/github.com/nickscript0/telegraf/
 ./telegraf -config /etc/opt/telegraf/telegraf.conf
 ```
 
+### Dev workflow
+```bash
+docker-compose run buildtelegraf /bin/bash
+
+# Instead of updating the go library to use nickscript0/telegraf, just replace in the tree
+cd /go/src/github.com/influxdb
+rm -rf telegraf
+git clone https://github.com/nickscript0/telegraf.git
+cd telegraf
+make
+
+# Make a change to the source, the build and run it
+make
+./telegraf -config /etc/opt/telegraf/telegraf.conf
+
+```
+
 ## Sample InfluxDB queries
 ```sql
 select * from cpu_system where cpu = 'cpu-total' AND time > now() - 2m
