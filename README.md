@@ -3,17 +3,11 @@
 A docker-compose environment for building and developing InfluxDB Telegraf
 
 ## Usage
-### Run Influxdb
-```bash
-docker-compose up -d influxdb
-# Go to localhost:8083 in a web browser
-```
-
 ### Build and run telegraf from source
 *Warning: If you're on a limited internet connection, running this the first time will download about 200MB of dependencies*
 ```bash
-# "go get" and build telegraf
-docker-compose up -d buildtelegraf
+# The following command will "go get" and build telegraf (and startup an influxdb instance to test against)
+docker-compose up -d
 # All the telegraf go src and dependencies are now available on your host in
 # folder docker_build_telegraf/src
 
